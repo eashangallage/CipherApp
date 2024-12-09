@@ -117,7 +117,7 @@ def Txt2Vigenere(InputString  : str , InputKey : str ) -> str :
         if char.isalpha():
             # Calculate the shift using the current key character
             shift : int  = Alphabet.index(InputKey[key_index % key_length])
-            EncryptedChar : str = Alphabet[(Alphabet.index(char) + shift + 1) % 26]
+            EncryptedChar : str = Alphabet[(Alphabet.index(char) + shift) % 26]
             EncryptedText += EncryptedChar
             key_index += 1
         else:
